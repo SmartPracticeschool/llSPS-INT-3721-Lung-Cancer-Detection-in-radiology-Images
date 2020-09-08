@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+
+<h2 style="text-align: center; color: #000099; font-family: Times New Roman;font-size:2.1em";><b>Lung Cancer Prediction using Neural Network</b></h2>
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+<div class="flex-column-center">
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose Image
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" style="background-color: blue;border: none; color: white; cursor: pointer; font-size: 1.5em;margin-left:35%;margin-right:auto;display:inline-block;margin-top:0%;margin-bottom:75%; class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result" style="color:cc0000; text-align: center;font-weight:bold; font-family: sans-serif";>
+        <span> </span>
+    </h3>
+    <br>
+    <br>
+  
+  </div>
+
+</div>
+ <p style="color:#000000;font-family:Times New Roman;font-size:1.7em"><b>By analyzing the given input image ,model predicts whether the person is suffering from &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; cancer or not.</b></p>
+
+{% endblock %}
